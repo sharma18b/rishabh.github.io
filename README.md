@@ -145,6 +145,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Email](mailto:contact@rishabh-sharma.com)
 
 ---
-
-<p align="center">Crafted with ❤️ by Rishabh Sharma</p>
-<p align="center">© 2025 All Rights Reserved</p>
