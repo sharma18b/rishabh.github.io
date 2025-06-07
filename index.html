@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Rishabh Sharma</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Rishabh Sharma | AI Developer</title>
+  <meta content="Portfolio of Rishabh Sharma - Software Developer specializing in AI and cloud technologies" name="description">
+  <meta content="developer, AI, machine learning, AWS, software engineer, portfolio" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Fira+Code:400,500,600"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -28,6 +28,324 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Dark Mode Toggle CSS -->
+  <style>
+    :root {
+      --primary-color: #149ddd;
+      --secondary-color: #173b6c;
+      --text-color: #272829;
+      --bg-color: #f5f8fd;
+      --section-bg: #f5f8fd;
+      --card-bg: #fff;
+      --border-color: #ddd;
+    }
+    
+    body.dark-mode {
+      --primary-color: #64ffda;
+      --secondary-color: #7b89a8;
+      --text-color: #e6f1ff;
+      --bg-color: #0a192f;
+      --section-bg: #112240;
+      --card-bg: #1d2d50;
+      --border-color: #2d3748;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+    
+    .section-bg {
+      background-color: var(--section-bg);
+    }
+    
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .dark-mode-toggle:hover {
+      transform: scale(1.1);
+    }
+    
+    .card, .testimonial-item, .icon-box {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+    
+    .text-light, h1, h2, h3, h4, h5, h6 {
+      color: var(--text-color) !important;
+    }
+    
+    /* Improve text visibility in dark mode */
+    body.dark-mode .section-title h2 {
+      color: #64ffda !important;
+    }
+    
+    body.dark-mode .resume-item h4 {
+      color: #e6f1ff !important;
+    }
+    
+    body.dark-mode .resume-item h5 {
+      color: #64ffda !important;
+      background-color: rgba(100, 255, 218, 0.1);
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    
+    body.dark-mode p, body.dark-mode li, body.dark-mode label {
+      color: #ccd6f6 !important;
+    }
+    
+    body.dark-mode .icon-box .title a {
+      color: #e6f1ff !important;
+    }
+    
+    body.dark-mode .contact .info h4 {
+      color: #64ffda !important;
+    }
+    
+    /* Glassmorphism effects */
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    body.dark-mode .glassmorphism {
+      background: rgba(10, 25, 47, 0.7);
+    }
+    
+    /* Improved sidebar */
+    #header {
+      width: 280px;
+      padding: 20px 0;
+    }
+    
+    #header .profile h1 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .icon-box .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+      background: var(--primary-color);
+      border-radius: 50%;
+    }
+    
+    .icon-box .icon i {
+      color: #fff;
+      font-size: 20px;
+    }
+    
+    .services .icon-box {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    
+    .services .icon {
+      margin-bottom: 10px;
+      width: 30px;
+      height: 30px;
+    }
+    
+    .services .icon i {
+      font-size: 16px;
+    }
+    
+    .services .title {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    .services .description {
+      line-height: 1.4;
+    }
+    
+    /* Particle background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    /* Make hero text more visible against background image */
+    #hero .hero-container {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      max-width: 80%;
+    }
+    
+    #hero .btn-get-started {
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: 50px;
+      transition: 0.5s;
+      color: #fff;
+      background: rgba(20, 157, 221, 0.8);
+      border: 2px solid transparent;
+    }
+    
+    #hero .btn-get-started:hover {
+      background: transparent;
+      border-color: #fff;
+    }
+    
+    /* Portfolio/Projects section */
+    .portfolio-wrap {
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background: var(--card-bg);
+      border-radius: 8px;
+    }
+    
+    .portfolio-wrap img {
+      object-fit: cover;
+      height: 240px;
+      width: 100%;
+    }
+    
+    .portfolio-info {
+      padding: 20px;
+    }
+    
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+    
+    /* Consistent card heights */
+    .icon-box, .portfolio-wrap, .testimonial-item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .icon-box .icon, .portfolio-info h4 {
+      margin-bottom: 15px;
+    }
+    
+    .icon-box .description, .portfolio-info p {
+      flex-grow: 1;
+    }
+    
+    /* Consistent spacing */
+    .section-title {
+      margin-bottom: 40px;
+    }
+    
+    section {
+      padding: 60px 0;
+      overflow: hidden;
+    }
+    
+    .glassmorphism {
+      border-radius: 8px;
+    }
+    
+    /* Code block styling */
+    pre.code-block {
+      font-family: 'Fira Code', monospace;
+      background: var(--section-bg);
+      border-left: 3px solid var(--primary-color);
+      margin: 20px 0;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+    
+    body.dark-mode pre.code-block {
+      background: #1a2233;
+      color: #e6f1ff;
+    }
+    
+    body.dark-mode pre.code-block code {
+      color: #e6f1ff;
+    }
+    
+    pre.code-block code .comment {
+      color: #637777;
+    }
+    
+    pre.code-block code .keyword {
+      color: #cc99cd;
+    }
+    
+    pre.code-block code .function {
+      color: #f8c555;
+    }
+    
+    pre.code-block code .string {
+      color: #7ec699;
+    }
+    
+    /* Tech stack visualization */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
+    .tech-badge {
+      background: var(--section-bg);
+      color: var(--text-color);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    
+    .tech-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background: var(--primary-color);
+      color: #fff;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: iPortfolio - v3.7.0
@@ -47,27 +365,25 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/propic.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Rishabh Sharma</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/thisisrishabhsharma/" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/rishaabh.__/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-          <a href="#" class="https://www.linkedin.com/in/rishabh18b/"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://twitter.com/" class="twitter" title="Twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/thisisrishabhsharma/" class="facebook" title="Facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/rishaabh.__/" class="instagram" title="Instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://github.com/" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/rishabh18b/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <!-- <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li> -->
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Sketches</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>AI Projects</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Blogs</span></a></li>
-          <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Spotify</span></a>
-          </li>
+          <li><a href="#tech-stack" class="nav-link scrollto"><i class="bx bx-chip"></i> <span>Tech Stack</span></a></li>
+          <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-music"></i> <span>Spotify</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -76,61 +392,80 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div id="particles-js"></div>
     <div class="hero-container" data-aos="fade-in">
       <h1>Rishabh Sharma</h1>
       <p>I'm <span class="typed"
-          data-typed-items="Software Developer, Bibliophile , Cinephile , Excursionist, Artist(NOOB)"></span></p>
+          data-typed-items="a Software Developer, an AI Enthusiast, a Cloud Engineer, a Problem Solver, always learning"></span></p>
+      <div class="mt-4">
+        <a href="#about" class="btn-get-started scrollto">Explore My Work</a>
+      </div>
     </div>
   </section><!-- End Hero -->
+
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle" id="darkModeToggle">
+    <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+  </div>
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <!-- <section id="about" class="about">
+    <section id="about" class="about">
       <div class="container">
 
         <div class="section-title">
-          <h2>About</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>About Me</h2>
+          <p>I'm a software engineer specializing in cloud-native applications and AI-driven solutions, with a passion for solving complex technical challenges.</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/propic.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX Designer &amp; Web Developer.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <div class="glassmorphism p-4 mb-4">
+              <h3>Software Engineer &amp; AI Specialist</h3>
+              <p class="fst-italic">
+                Driven by innovation and technical excellence, I develop scalable solutions that leverage cutting-edge technologies to solve real-world problems.
+              </p>
+              <div class="row mt-4">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Bangalore, India</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>risharma18b@gmail.com</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 94245-97135</span></li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech, IIT Guwahati</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Current Role:</strong> <span>SDE at Amazon</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Focus Areas:</strong> <span>Cloud Architecture, AI/ML, Data Engineering</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
+            
+            <div class="glassmorphism p-4">
+              <h4 class="mb-3">My Engineering Philosophy</h4>
+              <pre class="code-block p-3 rounded">
+<code>function solveComplexProblems(challenge) {
+  const components = decomposeIntoComponents(challenge);
+  
+  const solutions = components.map(component => {
+    const pattern = selectOptimalPattern(component);
+    return implementSolution(component, pattern);
+  });
+  
+  return solutions.reduce((system, solution) => {
+    return integrateWithTesting(system, solution);
+  }, new SystemArchitecture());
+}</code>
+              </pre>
+            </div>
           </div>
         </div>
 
       </div>
-    </section>End About Section -->
+    </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
     <!-- <section id="facts" class="facts">
@@ -251,349 +586,311 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Resume</h2>
-          <p>I have a knack for problem-solving, and facing new challenges keeps me motivated. I have my interests in
-            programming and something that I love about programming is the opportunity to work with people from a wide
-            range of disciplines. Leisure interests include reading thriller-genre books and playing chess.</p>
+          <h2>Professional Journey</h2>
+          <p>With a strong foundation in software engineering and a focus on cloud technologies, I've built expertise in developing scalable solutions for complex business challenges.</p>
         </div>
 
         <div class="row">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Rishabh Sharma</h4>
-              <p><em>Innovative and deadline-driven software developer who is keen to learn and explore new technologies.</em></p>
-              <ul>
-                <li>Bangalore, India</li>
-                <!-- <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li> -->
-              </ul>
+          <div class="col-lg-12">
+            <div class="glassmorphism p-4 mb-4">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>Rishabh Sharma</h4>
+                <p><em>Results-driven Software Engineer with expertise in cloud architecture, data engineering, and AI/ML technologies. Proven track record of delivering high-impact solutions that drive business value through technical innovation.</em></p>
+                <ul>
+                  <li>Bangalore, India</li>
+                </ul>
+              </div>
             </div>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Technology, Electronics &amp; Communication Engineering</h4>
-              <h5>2018 - 2022</h5>
-              <p><em><b>Indian Institute of Technology (IIT) Guwahati, Assam, India </b></em></p>
+            <div class="glassmorphism p-4 mb-4">
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Technology, Electronics &amp; Communication Engineering</h4>
+                <h5>2018 - 2022</h5>
+                <p><em><b>Indian Institute of Technology (IIT) Guwahati, Assam, India </b></em></p>
+                <p>Developed a strong foundation in engineering principles, algorithms, and system design. Specialized in signal processing and communication systems with applications in modern computing.</p>
+              </div>
             </div>
-            <!-- <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          </div> -->
+            
+            <div class="glassmorphism p-4">
               <h3 class="resume-title">Professional Experience</h3>
               <div class="resume-item">
-                <h4>Software Development Engineer ,Amazon </h4>
+                <h4>Software Development Engineer, Amazon</h4>
                 <h5>July 2022 - Present</h5>
-                <p><em>Bangalore, India</em></p>
-                Working in Finance Technology.
+                <p><em>Finance Technology, Bangalore, India</em></p>
+                <p>Developing innovative solutions for financial data reconciliation and compliance systems.</p>
                 <ul>
-                  Innovated orchestrator module for an Audit tool, enhancing tax data reconciliation across all
-                  Amazon
-                  IN businesses. Utilized Amazon ECS, AWS Lambda, AWS DynamoDB, SNS, and SQS for rapid communication and
-                  robust authentication-authorization, elevating reporting exception handling and anomaly detection.
-
+                  <li><strong>Audit Orchestration System:</strong> Architected and implemented a comprehensive orchestration module for tax data reconciliation across Amazon India businesses, utilizing AWS serverless architecture (Lambda, DynamoDB, SNS/SQS) to enhance reporting capabilities and anomaly detection.</li>
+                  <li><strong>TDS Reconciliation Tool:</strong> Led the design and development of a tax credit recovery system that identifies discrepancies in tax deduction data. Implemented interactive visualization dashboards providing comprehensive system health insights.</li>
+                  <li><strong>Regulatory Compliance Platform:</strong> Successfully onboarded Amazon IN Retail business onto a Regulatory Audit and Risk Assessment System, ensuring timely compliance through automated anomaly detection.</li>
+                  <li><strong>Big Data Processing:</strong> Implemented high-performance data processing pipelines using Apache Spark with Hudi for accelerated reconciliation of large datasets, focusing on data completeness and systematic report generation.</li>
+                  <li><strong>Technical Leadership:</strong> Established best practices for service deployment and management, mentoring team members on cloud-native development patterns.</li>
                 </ul>
-                <ul>Pioneered the design and development of a TDS reconciliation tool, identifying discrepancies and
-                  securing tax credits. Mentored developers in crafting an interactive UI and correlated backend
-                  services,
-                  providing a comprehensive System Health Insights bird's-eye view. Employed Amazon Athena for
-                  consecutive
-                  reconciliations and streamlined data source mappings.</ul>
-                <ul> Successfully onboarded Amazon IN Retail business onto a Regulatory Audit and Risk Assessment
-                  System,
-                  ensuring anomaly detection for timely compliance. Applied Spark framework with Hudi for accelerated
-                  reconciliation and transformation of large datasets, emphasizing data completeness, system state
-                  management, and systematic report generation.</ul>
-                <ul>Committed to continuous learning, led best practices for deployment and management of services,
-                  contributing to the success of intricate projects in tax data reconciliation and anomaly detection.
-                </ul>
-                <ul>Misc AWS Technologies Explored - S3, Elastic Load Balancing, EC2, EMR, Textract.</ul>
-
-
+                <p><strong>Technologies:</strong> AWS (Lambda, ECS, DynamoDB, S3, SNS/SQS, Athena, EC2, EMR, Textract), Apache Spark, Hudi, Java, Python</p>
               </div>
+              
               <div class="resume-item">
                 <h4>Software Engineer Intern</h4>
                 <h5>May 2021 - July 2021</h5>
-                <p><em> Pune, India </em></p>
+                <p><em>Pune, India</em></p>
                 <ul>
-                  <li>Developed a REST Spring Boot Angular application with different services and implemented mockito
-                    tests.</li>
-                  <li>Used JDBC api to create connection with the database, performed queries and visualized results
-                    with swagger-ui. </li>
-                  <li>Analyzed and provided solution to resolve 4 jiras related to missing breaks in a Portfolio
-                    Services System application.</li>
+                  <li>Developed a microservices-based application using Spring Boot and Angular, implementing RESTful APIs with comprehensive test coverage using Mockito.</li>
+                  <li>Designed and implemented database integration using JDBC, creating efficient queries and visualizing results through Swagger UI.</li>
+                  <li>Resolved critical issues in a Portfolio Services System application, improving code quality and system reliability.</li>
                 </ul>
-              
-
+                <p><strong>Technologies:</strong> Java, Spring Boot, Angular, JDBC, SQL, Mockito, Swagger</p>
+              </div>
+            </div>
           </div>
-
         </div>
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Sketches</h2>
-          <p> Leisure Interest (Maybe someday I will be able to draw better) </p>
+          <h2>AI Projects</h2>
+          <p>Showcasing my work in artificial intelligence, machine learning, and cloud technologies.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-ai">AI/ML</li>
+              <li data-filter=".filter-cloud">Cloud</li>
+              <li data-filter=".filter-data">Data Engineering</li>
             </ul>
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="AI Project">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" data-gallery="portfolioGallery" class="portfolio-lightbox" title="TDS Reconciliation Tool"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>TDS Reconciliation Tool</h4>
+                <p>AI-powered tax data reconciliation system</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cloud">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="Cloud Project">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" data-gallery="portfolioGallery" class="portfolio-lightbox" title="AWS Lambda Orchestration"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>AWS Lambda Orchestration</h4>
+                <p>Serverless architecture for data processing</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="Data Project">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Spark Data Pipeline"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Spark Data Pipeline</h4>
+                <p>Large-scale data transformation with Apache Spark</p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
-    </section> -->
-    <!-- End Portfolio Section -->
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Tech Stack Section ======= -->
+    <section id="tech-stack" class="skills">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Tech Stack</h2>
+          <p>My technical expertise spans across various domains including cloud computing, AI/ML, and software development.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="tech-category">Programming Languages</h3>
+            <div class="tech-stack">
+              <span class="tech-badge">Java</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">C++</span>
+              <span class="tech-badge">SQL</span>
+            </div>
+
+            <h3 class="tech-category">Cloud & Infrastructure</h3>
+            <div class="tech-stack">
+              <span class="tech-badge">AWS Lambda</span>
+              <span class="tech-badge">Amazon ECS</span>
+              <span class="tech-badge">DynamoDB</span>
+              <span class="tech-badge">S3</span>
+              <span class="tech-badge">EC2</span>
+              <span class="tech-badge">SNS/SQS</span>
+              <span class="tech-badge">Athena</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="tech-category">AI & Data</h3>
+            <div class="tech-stack">
+              <span class="tech-badge">Apache Spark</span>
+              <span class="tech-badge">Hudi</span>
+              <span class="tech-badge">Machine Learning</span>
+              <span class="tech-badge">Data Analytics</span>
+            </div>
+
+            <h3 class="tech-category">Tools & Frameworks</h3>
+            <div class="tech-stack">
+              <span class="tech-badge">Spring Boot</span>
+              <span class="tech-badge">Angular</span>
+              <span class="tech-badge">Git</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Tech Stack Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
 
         <div class="section-title">
-          <h2>Blogs</h2>
-          <p></p>
+          <h2>Blogs & Insights</h2>
+          <p>Sharing my knowledge and experiences in software development, AI, and cloud technologies.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Image Captioning</a></h4>
-            <p class="description">Not Added Yet</p>
+        <div class="row g-3">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="icon-box glassmorphism py-3 px-3">
+              <div class="icon mb-2"><i class="bi bi-cpu"></i></div>
+              <h4 class="title mb-2"><a href="">AI-Powered Image Captioning</a></h4>
+              <p class="description small">Exploring computer vision and NLP for automated image description.</p>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Movies and Shows </a></h4>
-            <p class="description">To Be Added </p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box glassmorphism py-3 px-3">
+              <div class="icon mb-2"><i class="bi bi-cloud"></i></div>
+              <h4 class="title mb-2"><a href="">Serverless Architecture Patterns</a></h4>
+              <p class="description small">Best practices for AWS Lambda and event-driven design.</p>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Projects</a></h4>
-            <p class="description">TBA</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box glassmorphism py-3 px-3">
+              <div class="icon mb-2"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title mb-2"><a href="">Data Engineering at Scale</a></h4>
+              <p class="description small">Processing terabytes of data with Apache Spark and AWS EMR.</p>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="https://leetcode.com/risharma18b/">Leetcode Profile</a></h4>
-            <p class="description"></p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box glassmorphism py-3 px-3">
+              <div class="icon mb-2"><i class="bi bi-code-square"></i></div>
+              <h4 class="title mb-2"><a href="https://leetcode.com/risharma18b/">My LeetCode Journey</a></h4>
+              <p class="description small">Solving algorithmic challenges and improving problem-solving skills.</p>
+            </div>
           </div>
-          <!--<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box glassmorphism py-3 px-3">
+              <div class="icon mb-2"><i class="bi bi-film"></i></div>
+              <h4 class="title mb-2"><a href="">Tech in Cinema</a></h4>
+              <p class="description small">Analyzing the portrayal of technology and AI in modern media.</p>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div> -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box glassmorphism py-3 px-3">
+              <div class="icon mb-2"><i class="bi bi-book"></i></div>
+              <h4 class="title mb-2"><a href="">Reading List for Developers</a></h4>
+              <p class="description small">Books that shaped my understanding of software development.</p>
+            </div>
+          </div>
         </div>
 
       </div>
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
         <div class="section-title">
           <h2>Spotify</h2>
-          <p>Here are some of my spotify playlists.</p>
+          <p>Music fuels my creativity. Here are some of my favorite playlists that keep me coding.</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <!-- <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div> -->
-              <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/4V5U6uUlT5uv5gqG6p8don?utm_source=generator&theme=0"
-                width="100%" height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              <div class="testimonial-item glassmorphism h-100">
+                <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/playlist/4V5U6uUlT5uv5gqG6p8don?utm_source=generator&theme=0"
+                  width="100%" height="380" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h3>Coding Focus</h3>
+                <p>Perfect for deep work sessions</p>
+              </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <!-- <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div> -->
-              <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/53Fa5BwtEVOFikJavcQBQ5?utm_source=generator" width="100%"
-                height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              <div class="testimonial-item glassmorphism h-100">
+                <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/playlist/53Fa5BwtEVOFikJavcQBQ5?utm_source=generator" width="100%"
+                  height="380" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h3>Creative Flow</h3>
+                <p>When I need inspiration</p>
+              </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <!-- <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div> -->
-              <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/48FzzGrpY8kNujWQgkJJsB?utm_source=generator" width="100%"
-                height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              <div class="testimonial-item glassmorphism h-100">
+                <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/playlist/48FzzGrpY8kNujWQgkJJsB?utm_source=generator" width="100%"
+                  height="380" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h3>Relaxation</h3>
+                <p>Unwinding after a coding marathon</p>
+              </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <!-- <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div> -->
-              <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/6kwsrBHZuJHfhoolCjEnKP?utm_source=generator" width="100%"
-                height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              <div class="testimonial-item glassmorphism h-100">
+                <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/playlist/6kwsrBHZuJHfhoolCjEnKP?utm_source=generator" width="100%"
+                  height="380" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h3>Energy Boost</h3>
+                <p>For those late night coding sessions</p>
+              </div>
             </div><!-- End testimonial item -->
 
-
-
-
-
             <div class="swiper-slide">
-              <!-- <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div> -->
-              <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/7jkri3Ec6mxAiTUZVP0D40?utm_source=generator" width="100%"
-                height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              <div class="testimonial-item glassmorphism h-100">
+                <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/playlist/7jkri3Ec6mxAiTUZVP0D40?utm_source=generator" width="100%"
+                  height="380" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h3>Weekend Vibes</h3>
+                <p>When I'm working on personal projects</p>
+              </div>
             </div><!-- End testimonial item -->
 
           </div>
@@ -609,59 +906,69 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>If you wanna talk about something, recommend or discuss any book/web-show feel free to contact me.</p>
+          <p>Interested in collaborating on AI projects, discussing tech trends, or just want to chat about books and movies? Feel free to reach out!</p>
         </div>
 
         <div class="row" data-aos="fade-in">
 
           <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
+            <div class="info glassmorphism">
+              <div class="address mb-4">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Bangalore &#128521;</p>
+                <p>Bangalore, India</p>
               </div>
 
-              <div class="email">
+              <div class="email mb-4">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>risharma18b@gmail.com</p>
               </div>
 
-              <div class="phone">
+              <div class="phone mb-4">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+9194245-97135</p>
+                <p>+91 94245-97135</p>
+              </div>
+              
+              <div class="social mb-4">
+                <i class="bi bi-person-badge"></i>
+                <h4>Connect:</h4>
+                <div class="social-links mt-3">
+                  <a href="https://github.com/" target="_blank" class="github p-2"><i class="bx bxl-github bx-md"></i></a>
+                  <a href="https://www.linkedin.com/in/rishabh18b/" target="_blank" class="linkedin p-2"><i class="bx bxl-linkedin bx-md"></i></a>
+                  <a href="https://leetcode.com/risharma18b/" target="_blank" class="leetcode p-2"><i class="bx bx-code-alt bx-md"></i></a>
+                </div>
               </div>
 
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15552.649179714963!2d77.71085735!3d12.961464699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1658577190531!5m2!1sen!2sin"
-                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                frameborder="0" style="border:0; width: 100%; height: 290px; margin-top: 20px;" allowfullscreen></iframe>
             </div>
 
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form glassmorphism">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="name" class="mb-2">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="email" class="mb-2">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
+              <div class="form-group mb-3">
+                <label for="subject" class="mb-2">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+              <div class="form-group mb-3">
+                <label for="message" class="mb-2">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
               </div>
-              <div class="my-3">
+              <div class="my-4">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
@@ -680,12 +987,9 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <!-- <div class="copyright">
-        &copy; Copyright <strong><span>Rishabh</span></strong>
-      </div> -->
-
+      <!-- Copyright removed as requested -->
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
@@ -700,9 +1004,148 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <!-- Particles.js for background effects -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Custom JS for dark mode and particles -->
+  <script>
+    // Dark mode toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const darkModeIcon = document.getElementById('darkModeIcon');
+      
+      // Set dark mode as default
+      document.body.classList.add('dark-mode');
+      darkModeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+      localStorage.setItem('theme', 'dark');
+      
+      // Toggle dark mode on click
+      darkModeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+          darkModeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+        } else {
+          localStorage.setItem('theme', 'light');
+          darkModeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+        }
+      });
+      
+      // Initialize particles.js
+      if (document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 80,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#149ddd"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#149ddd",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 2,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 140,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+      }
+    });
+  </script>
 
 </body>
 
