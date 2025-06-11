@@ -1,4 +1,4 @@
-# 🚀 Rishabh Sharma | AI Developer Portfolio
+# 🚀 Rishabh Sharma | Developer Portfolio
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/rishaabh/rishabh.github.io?style=flat-square)](https://github.com/rishaabh/rishabh.github.io/commits/main)
 [![Website Status](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Frishaabh.github.io)]([https://rishaabh.github.io](https://sharma18b.github.io/rishabh.github.io/#))
