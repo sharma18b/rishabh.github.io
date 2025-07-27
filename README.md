@@ -140,8 +140,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Connect
 
-- [LinkedIn](https://linkedin.com/in/rishabh-sharma)
-- [Twitter](https://twitter.com/rishabh_sharma)
-- [Email](mailto:contact@rishabh-sharma.com)
+- [LinkedIn](https://www.linkedin.com/in/rishabh18b/)
+- [Twitter](https://x.com/rissshhhhabh)
+- [Email](mailto:risharma18b@gmail.com)
 
 ---
