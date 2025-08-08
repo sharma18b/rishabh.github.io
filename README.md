@@ -7,7 +7,7 @@
 
 ## 📌 Overview
 
-A meticulously crafted, performance-optimized portfolio showcasing my expertise as an AI Developer. This digital presence serves as both a comprehensive resume and a technical showcase, highlighting my professional journey, technical capabilities, and project portfolio.
+A modern, performance-optimized portfolio showcasing my journey as a Software Engineer at Amazon. This digital presence serves as both a comprehensive resume and a technical showcase, highlighting my professional experience, technical capabilities, and project portfolio.
 
 **[✨ Live Site](https://rishaabh.github.io)**
 
@@ -15,21 +15,28 @@ A meticulously crafted, performance-optimized portfolio showcasing my expertise 
 
 ## 🎯 Key Features
 
+### 🎨 **Modern Design**
+- **Glassmorphism Floating Dock**: Unique macOS-style navigation with blur effects
 - **Responsive Architecture**: Fluid design system that adapts seamlessly across all device form factors
-- **Intelligent Theming**: Context-aware dark/light mode that respects system preferences with manual override
-- **Performance Optimized**: Lighthouse score of 90+ across all metrics with optimized asset delivery
-- **Accessibility Focused**: WCAG 2.1 AA compliant with semantic HTML and proper ARIA attributes
+- **Intelligent Theming**: Context-aware dark/light mode with manual override
 - **Interactive Elements**: Micro-interactions and subtle animations enhancing user engagement
-- **Project Showcase**: Detailed case studies with technical specifications and outcome metrics
-- **Content Strategy**: Integrated blog platform for technical thought leadership
-- **Contact Integration**: Secure form handling with validation and spam protection
+
+### ⚡ **Performance & Accessibility**
+- **Performance Optimized**: Lighthouse score of 90+ across all metrics
+- **Accessibility Focused**: WCAG 2.1 AA compliant with semantic HTML and proper ARIA attributes
+- **SEO Optimized**: Structured data and meta tags for better search visibility
+
+### 📝 **Content Management**
+- **Dynamic Blog System**: JSON-based blog management for easy updates
+- **Real Project Showcase**: Authentic GitHub projects with live links
+- **Professional Tone**: Humble and approachable content strategy
 
 ## 🛠️ Technical Stack
 
 ```
 Frontend Core:
 ├── HTML5 (Semantic markup)
-├── CSS3 (Custom properties, Flexbox, Grid)
+├── CSS3 (Custom properties, Flexbox, Grid, Glassmorphism)
 └── JavaScript (ES6+, Vanilla)
 
 Framework & Libraries:
@@ -58,6 +65,8 @@ rishabh.github.io/
 │   ├── css/                 # Stylesheets
 │   │   ├── style.css        # Main stylesheet
 │   │   └── variables.css    # CSS custom properties
+│   ├── data/                # Dynamic content
+│   │   └── blogs.json       # Blog posts data
 │   ├── img/                 # Optimized images
 │   ├── js/                  # JavaScript modules
 │   │   ├── main.js          # Core functionality
@@ -66,15 +75,36 @@ rishabh.github.io/
 ├── forms/                   # Form handling
 │   └── contact.php          # Contact form processor
 ├── index.html               # Main entry point
-├── portfolio-details.html   # Project case study template
-├── inner-page.html          # Generic page template
-├── blog/                    # Technical articles
+├── resume.html              # Resume/CV page
+├── projects.html            # Projects showcase
+├── blog.html                # Technical blog
+├── contact.html             # Contact information
 └── README.md                # Project documentation
 ```
 
+## 🎨 **Unique Features**
+
+### **Glassmorphism Floating Dock Navigation**
+- **Desktop**: Vertical dock on the left with hover animations
+- **Mobile**: Horizontal dock at bottom for touch-friendly navigation
+- **Interactive**: Scale effects, tooltips, and smooth transitions
+- **Accessible**: Proper ARIA labels and keyboard navigation
+
+### **Dynamic Blog Management**
+- **JSON-based**: Easy content updates via `assets/data/blogs.json`
+- **Auto-loading**: JavaScript dynamically generates blog cards
+- **Medium Integration**: Direct links to published articles
+- **Responsive Cards**: 3-column desktop, 2-column tablet, 1-column mobile
+
+### **Real Project Showcase**
+- **GitHub Integration**: Live links to actual repositories
+- **Diverse Portfolio**: AI/ML, Web Development, and Robotics projects
+- **Interactive Filtering**: Filter projects by category
+- **Professional Presentation**: Clean cards with tech stack badges
+
 ## 🔄 Development Workflow
 
-This project follows a trunk-based development model with feature branches:
+This project follows a trunk-based development model:
 
 1. **Feature Development**:
    ```bash
@@ -84,15 +114,18 @@ This project follows a trunk-based development model with feature branches:
    git push origin feature/new-component
    ```
 
-2. **Code Review**:
-   - Create pull request against `main`
-   - Automated checks run (linting, accessibility, performance)
-   - Peer review process
+2. **Content Updates**:
+   ```bash
+   # Update blog content
+   vim assets/data/blogs.json
+   
+   # Add new project
+   # Update projects.html with new project card
+   ```
 
 3. **Deployment**:
-   - Merge to `main` triggers GitHub Actions workflow
-   - Automated build and deployment to GitHub Pages
-   - Post-deployment validation
+   - Push to `main` triggers automatic GitHub Pages deployment
+   - Changes are live within minutes
 
 ## 🚀 Local Development
 
@@ -109,6 +142,9 @@ python -m http.server 8000
 
 # Option 2: Node.js with live-server
 npx live-server --port=8000
+
+# Option 3: PHP (for contact form testing)
+php -S localhost:8000
 ```
 
 Then visit `http://localhost:8000` in your browser.
@@ -123,17 +159,6 @@ Then visit `http://localhost:8000` in your browser.
 | SEO             | 100   | 100    |
 | First Load Time | 1.2s  | <1.5s  |
 
-## 🔮 Roadmap
-
-The portfolio is continuously evolving with planned enhancements:
-
-- [ ] **Q3 2025**: Implement WebGL-powered interactive background
-- [ ] **Q3 2025**: Add case study video walkthroughs
-- [ ] **Q4 2025**: Integrate dynamic project filtering system
-- [ ] **Q4 2025**: Develop custom analytics dashboard
-- [ ] **Q1 2026**: Implement internationalization (i18n)
-- [ ] **Q1 2026**: Add WebAssembly-powered interactive demos
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -142,6 +167,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [LinkedIn](https://www.linkedin.com/in/rishabh18b/)
 - [Twitter](https://x.com/rissshhhhabh)
+- [Medium](https://risharma18b.medium.com/)
 - [Email](mailto:risharma18b@gmail.com)
 
 ---
+
+*Built with ❤️ by Rishabh Sharma*

@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Rishabh Sharma</title>
-  <meta content="Rishabh Sharma's personal website and portfolio" name="description">
-  <meta content="developer, AI, machine learning, AWS, software engineer, portfolio" name="keywords">
+  <title>Blog | Rishabh Sharma</title>
+  <meta content="Blog posts and thoughts by Rishabh Sharma" name="description">
+  <meta content="blog, AI, AWS, software development, machine learning, cloud computing" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Fira+Code:400,500,600"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -29,7 +29,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
-  <!-- Dark Mode Toggle CSS -->
   <style>
     :root {
       --primary-color: #149ddd;
@@ -98,20 +97,8 @@
       color: #64ffda !important;
     }
     
-    body.dark-mode .resume-item h4 {
+    body.dark-mode .icon-box .title a {
       color: #e6f1ff !important;
-    }
-    
-    body.dark-mode .resume-item h5 {
-      color: #64ffda !important;
-      background-color: rgba(100, 255, 218, 0.1);
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-    
-    body.dark-mode p, body.dark-mode li, body.dark-mode label {
-      color: #ccd6f6 !important;
     }
     
     .glassmorphism {
@@ -212,7 +199,6 @@
       color: #fff;
     }
     
-    /* Tooltip */
     .dock-item::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -238,7 +224,6 @@
       transform: translateY(-50%) translateX(5px);
     }
     
-    /* Profile Header */
     .profile-header {
       position: fixed;
       top: 30px;
@@ -288,13 +273,11 @@
       transform: translateY(-2px);
     }
     
-    /* Main content adjustment */
     #main {
       margin-left: 0;
       padding-left: 0;
     }
     
-    /* Mobile responsiveness */
     @media (max-width: 768px) {
       .floating-dock {
         bottom: 20px;
@@ -328,76 +311,100 @@
       }
     }
     
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
+    #header {
+      width: 280px;
+      padding: 20px 0;
     }
     
-    #hero .hero-container {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      max-width: 80%;
+    #header .profile h1 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      text-align: center;
     }
     
-    #hero .btn-get-started {
-      font-family: "Raleway", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      letter-spacing: 1px;
-      display: inline-block;
-      padding: 10px 28px;
-      border-radius: 50px;
-      transition: 0.5s;
+    .icon-box .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+      background: var(--primary-color);
+      border-radius: 50%;
+    }
+    
+    .icon-box .icon i {
       color: #fff;
-      background: rgba(20, 157, 221, 0.8);
-      border: 2px solid transparent;
+      font-size: 20px;
     }
     
-    #hero .btn-get-started:hover {
-      background: transparent;
-      border-color: #fff;
+    .services .icon-box {
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
     
-    pre.code-block {
-      font-family: 'Fira Code', monospace;
-      background: var(--section-bg);
-      border-left: 3px solid var(--primary-color);
-      margin: 20px 0;
-      overflow-x: auto;
+    .services .icon {
+      margin: 0 auto 10px auto;
+      width: 40px;
+      height: 40px;
+      background-color: #149ddd !important;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .services .icon i {
+      font-size: 20px;
+      color: #ffffff !important;
+    }
+    
+    body.dark-mode .services .icon {
+      background-color: #64ffda !important;
+    }
+    
+    body.dark-mode .services .icon i {
+      color: #000000 !important;
+    }
+    
+    .services .title {
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .services .title a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .services .description {
       line-height: 1.5;
-    }
-    
-    body.dark-mode pre.code-block {
-      background: #1a2233;
-      color: #e6f1ff;
-    }
-    
-    pre.code-block code .comment {
-      color: #637777;
-    }
-    
-    pre.code-block code .keyword {
-      color: #cc99cd;
-    }
-    
-    pre.code-block code .function {
-      color: #f8c555;
-    }
-    
-    pre.code-block code .string {
-      color: #7ec699;
+      flex-grow: 1;
+      text-align: center;
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-size: 14px;
     }
 
-    /* Contact Bottom Bar */
+    .blog-meta {
+      color: var(--primary-color);
+      font-size: 0.75em;
+      text-align: right;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+    }
+
     .contact-bar {
       background: var(--card-bg);
       border-top: 1px solid var(--border-color);
@@ -433,7 +440,7 @@
   <!-- ======= Floating Dock Navigation ======= -->
   <nav class="floating-dock">
     <div class="dock-container">
-      <a href="index.html" class="dock-item active" data-tooltip="Home">
+      <a href="index.html" class="dock-item" data-tooltip="Home">
         <i class="bx bx-home"></i>
       </a>
       <a href="resume.html" class="dock-item" data-tooltip="Resume">
@@ -442,7 +449,7 @@
       <a href="projects.html" class="dock-item" data-tooltip="Projects">
         <i class="bx bx-book-content"></i>
       </a>
-      <a href="blog.html" class="dock-item" data-tooltip="Blog">
+      <a href="blog.html" class="dock-item active" data-tooltip="Blog">
         <i class="bx bx-server"></i>
       </a>
       <a href="contact.html" class="dock-item" data-tooltip="Contact">
@@ -451,33 +458,6 @@
     </div>
   </nav>
 
-  <!-- ======= Profile Header ======= -->
-  <header class="profile-header">
-    <div class="profile-content">
-      <h1>Rishabh Sharma</h1>
-      <div class="social-links">
-        <a href="https://twitter.com/" class="twitter" title="Twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/thisisrishabhsharma/" class="facebook" title="Facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/rishaabh.__/" class="instagram" title="Instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/rishabh18b/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="margin-left: 0;">
-    <div id="particles-js"></div>
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Rishabh Sharma</h1>
-      <p>I'm <span class="typed"
-          data-typed-items="a Software Developer, learning and building, always curious, exploring technology"></span></p>
-      <div class="mt-4">
-        <a href="#about" class="btn-get-started scrollto">Get to Know Me</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Dark Mode Toggle -->
   <div class="dark-mode-toggle" id="darkModeToggle">
     <i class="bi bi-moon-fill" id="darkModeIcon"></i>
@@ -485,55 +465,23 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
       <div class="container">
 
         <div class="section-title">
-          <h2>About Me</h2>
-          <p>Welcome to my corner of the web. I'm passionate about technology and love building things that make a difference.</p>
+          <h2>Technical Blog & Insights</h2>
+          <p>Some thoughts and experiences from my journey in software development.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
-            <div class="glassmorphism p-4 mb-4">
-              <h3>Hello, I'm Rishabh</h3>
-              <p class="mb-4">
-                I'm a software engineer currently working at Amazon, where I get to work on interesting problems in the finance technology space. 
-                I graduated with a B.Tech in Electronics & Communication Engineering from IIT Guwahati in 2022, and since then, 
-                I've been exploring the fascinating world of cloud computing and artificial intelligence.
-              </p>
-              <p class="mb-4">
-                What excites me most about technology is its potential to solve real problems. Whether it's building data processing pipelines, 
-                creating AI-powered tools, or designing cloud architectures, I enjoy the process of turning complex challenges into elegant solutions.
-              </p>
-              <p class="mb-0">
-                When I'm not coding, you'll find me writing technical articles, exploring new technologies, or simply learning something new. 
-                I believe in continuous growth and sharing knowledge with the community.
-              </p>
-            </div>
-            
-            <div class="glassmorphism p-4" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="mb-3">How I Approach Problems</h4>
-              <pre class="code-block p-3 rounded">
-<code>function approachProblem(challenge) {
-  // Break it down into smaller pieces
-  const components = understand(challenge);
-  
-  // Find the right tools and patterns
-  const solutions = components.map(component => {
-    const approach = research(component);
-    return implement(component, approach);
-  });
-  
-  // Put it all together with care
-  return solutions.reduce((system, solution) => {
-    return integrate(system, solution, withTesting: true);
-  }, new Solution());
-}</code>
-              </pre>
-            </div>
-          </div>
+        <div class="row g-3" id="blog-container">
+          <!-- Blogs will be loaded dynamically -->
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="https://risharma18b.medium.com/" target="_blank" class="btn btn-primary btn-lg">
+            <i class="bx bxl-medium me-2"></i>Read More on Medium
+          </a>
         </div>
 
       </div>
@@ -546,15 +494,9 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8">
-          <div class="d-flex align-items-center flex-wrap">
-            <div class="me-4 mb-2 mb-md-0">
-              <i class="bi bi-geo-alt me-2"></i><strong>Bangalore, India</strong>
-            </div>
-            <div class="me-4 mb-2 mb-md-0">
-              <i class="bi bi-envelope me-2"></i><strong>risharma18b@gmail.com</strong>
-            </div>
-            <div class="me-4 mb-2 mb-md-0">
-              <i class="bi bi-phone me-2"></i><strong>+91 94245-97135</strong>
+          <div class="d-flex align-items-center">
+            <div class="me-4">
+              <strong>Let's connect:</strong> risharma18b@gmail.com | +91 94245-97135
             </div>
             <div class="social-links">
               <a href="https://github.com/" target="_blank"><i class="bx bxl-github"></i></a>
@@ -580,17 +522,11 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  
-  <!-- Particles.js for background effects -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
-  <!-- Custom JS for dark mode and particles -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const darkModeToggle = document.getElementById('darkModeToggle');
@@ -612,114 +548,38 @@
         }
       });
       
-      if (document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-          "particles": {
-            "number": {
-              "value": 80,
-              "density": {
-                "enable": true,
-                "value_area": 800
-              }
-            },
-            "color": {
-              "value": "#149ddd"
-            },
-            "shape": {
-              "type": "circle",
-              "stroke": {
-                "width": 0,
-                "color": "#000000"
-              },
-              "polygon": {
-                "nb_sides": 5
-              }
-            },
-            "opacity": {
-              "value": 0.5,
-              "random": false,
-              "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": true,
-              "distance": 150,
-              "color": "#149ddd",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 2,
-              "direction": "none",
-              "random": false,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-              }
-            }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "grab"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              },
-              "resize": true
-            },
-            "modes": {
-              "grab": {
-                "distance": 140,
-                "line_linked": {
-                  "opacity": 1
-                }
-              },
-              "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-              },
-              "repulse": {
-                "distance": 200,
-                "duration": 0.4
-              },
-              "push": {
-                "particles_nb": 4
-              },
-              "remove": {
-                "particles_nb": 2
-              }
-            }
-          },
-          "retina_detect": true
-        });
-      }
+      // Load blogs from JSON
+      loadBlogs();
     });
+    
+    async function loadBlogs() {
+      try {
+        const response = await fetch('assets/data/blogs.json');
+        const data = await response.json();
+        const blogContainer = document.getElementById('blog-container');
+        
+        data.blogs.forEach(blog => {
+          const blogCard = `
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${blog.delay}">
+              <div class="icon-box glassmorphism">
+                <div class="icon"><i class="bi ${blog.icon}"></i></div>
+                <h4 class="title"><a href="${blog.url}" target="_blank">${blog.title}</a></h4>
+                <p class="description">${blog.description}</p>
+                <div class="blog-meta">Published on ${blog.platform} • ${blog.date}</div>
+              </div>
+            </div>
+          `;
+          blogContainer.innerHTML += blogCard;
+        });
+        
+        // Reinitialize AOS after adding content
+        if (typeof AOS !== 'undefined') {
+          AOS.refresh();
+        }
+      } catch (error) {
+        console.error('Error loading blogs:', error);
+      }
+    }
   </script>
 
 </body>

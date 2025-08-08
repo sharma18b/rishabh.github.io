@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Rishabh Sharma</title>
-  <meta content="Rishabh Sharma's personal website and portfolio" name="description">
-  <meta content="developer, AI, machine learning, AWS, software engineer, portfolio" name="keywords">
+  <title>Projects | Rishabh Sharma</title>
+  <meta content="Projects and work by Rishabh Sharma" name="description">
+  <meta content="AI projects, machine learning, AWS, cloud architecture, data engineering" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Fira+Code:400,500,600"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -29,7 +29,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
-  <!-- Dark Mode Toggle CSS -->
   <style>
     :root {
       --primary-color: #149ddd;
@@ -83,7 +82,7 @@
       transform: scale(1.1);
     }
     
-    .card, .icon-box {
+    .card, .portfolio-wrap {
       background-color: var(--card-bg);
       border: 1px solid var(--border-color);
       transition: all 0.3s ease;
@@ -96,22 +95,6 @@
     
     body.dark-mode .section-title h2 {
       color: #64ffda !important;
-    }
-    
-    body.dark-mode .resume-item h4 {
-      color: #e6f1ff !important;
-    }
-    
-    body.dark-mode .resume-item h5 {
-      color: #64ffda !important;
-      background-color: rgba(100, 255, 218, 0.1);
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-    
-    body.dark-mode p, body.dark-mode li, body.dark-mode label {
-      color: #ccd6f6 !important;
     }
     
     .glassmorphism {
@@ -212,7 +195,6 @@
       color: #fff;
     }
     
-    /* Tooltip */
     .dock-item::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -238,7 +220,6 @@
       transform: translateY(-50%) translateX(5px);
     }
     
-    /* Profile Header */
     .profile-header {
       position: fixed;
       top: 30px;
@@ -288,13 +269,11 @@
       transform: translateY(-2px);
     }
     
-    /* Main content adjustment */
     #main {
       margin-left: 0;
       padding-left: 0;
     }
     
-    /* Mobile responsiveness */
     @media (max-width: 768px) {
       .floating-dock {
         bottom: 20px;
@@ -328,76 +307,105 @@
       }
     }
     
-    #particles-js {
-      position: absolute;
-      width: 100%;
+    #header {
+      width: 280px;
+      padding: 20px 0;
+    }
+    
+    #header .profile h1 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .portfolio-wrap {
       height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    
-    #hero .hero-container {
+      transition: all 0.3s ease;
       position: relative;
-      z-index: 2;
+      overflow: visible;
+      z-index: 1;
+      background: var(--card-bg);
+      border-radius: 8px;
+    }
+    
+    .portfolio-wrap:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .portfolio-info {
       padding: 20px;
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      max-width: 80%;
+      position: relative;
+      z-index: 10;
     }
     
-    #hero .btn-get-started {
-      font-family: "Raleway", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      letter-spacing: 1px;
-      display: inline-block;
-      padding: 10px 28px;
-      border-radius: 50px;
-      transition: 0.5s;
-      color: #fff;
-      background: rgba(20, 157, 221, 0.8);
-      border: 2px solid transparent;
+    .btn-primary {
+      background-color: #149ddd !important;
+      border: 1px solid #149ddd !important;
+      color: #ffffff !important;
+      padding: 8px 16px !important;
+      border-radius: 4px !important;
+      text-decoration: none !important;
+      display: inline-block !important;
+      font-weight: 500 !important;
+      position: relative !important;
+      z-index: 100 !important;
+      pointer-events: auto !important;
     }
     
-    #hero .btn-get-started:hover {
-      background: transparent;
-      border-color: #fff;
+    .portfolio-wrap img {
+      object-fit: cover;
+      height: 240px;
+      width: 100%;
     }
     
-    pre.code-block {
-      font-family: 'Fira Code', monospace;
-      background: var(--section-bg);
-      border-left: 3px solid var(--primary-color);
-      margin: 20px 0;
-      overflow-x: auto;
-      line-height: 1.5;
+    .portfolio-info {
+      padding: 20px;
     }
     
-    body.dark-mode pre.code-block {
-      background: #1a2233;
-      color: #e6f1ff;
+    .portfolio-item {
+      margin-bottom: 30px;
     }
     
-    pre.code-block code .comment {
-      color: #637777;
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
     }
     
-    pre.code-block code .keyword {
-      color: #cc99cd;
-    }
-    
-    pre.code-block code .function {
-      color: #f8c555;
-    }
-    
-    pre.code-block code .string {
-      color: #7ec699;
+    .tech-badge {
+      background-color: #149ddd !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 15px !important;
+      font-size: 0.8em !important;
+      font-weight: 500 !important;
+      display: inline-block !important;
+      margin: 2px !important;
     }
 
-    /* Contact Bottom Bar */
+    body.dark-mode .tech-badge {
+      background-color: #64ffda !important;
+      color: #000000 !important;
+    }
+    
+    body.dark-mode .btn-primary {
+      background-color: #64ffda !important;
+      border-color: #64ffda !important;
+      color: #000000 !important;
+      z-index: 100 !important;
+      pointer-events: auto !important;
+    }
+    
+    body.dark-mode .btn-primary:hover {
+      background-color: #7b89a8 !important;
+      border-color: #7b89a8 !important;
+      color: #ffffff !important;
+    }
+
     .contact-bar {
       background: var(--card-bg);
       border-top: 1px solid var(--border-color);
@@ -433,13 +441,13 @@
   <!-- ======= Floating Dock Navigation ======= -->
   <nav class="floating-dock">
     <div class="dock-container">
-      <a href="index.html" class="dock-item active" data-tooltip="Home">
+      <a href="index.html" class="dock-item" data-tooltip="Home">
         <i class="bx bx-home"></i>
       </a>
       <a href="resume.html" class="dock-item" data-tooltip="Resume">
         <i class="bx bx-file-blank"></i>
       </a>
-      <a href="projects.html" class="dock-item" data-tooltip="Projects">
+      <a href="projects.html" class="dock-item active" data-tooltip="Projects">
         <i class="bx bx-book-content"></i>
       </a>
       <a href="blog.html" class="dock-item" data-tooltip="Blog">
@@ -451,33 +459,6 @@
     </div>
   </nav>
 
-  <!-- ======= Profile Header ======= -->
-  <header class="profile-header">
-    <div class="profile-content">
-      <h1>Rishabh Sharma</h1>
-      <div class="social-links">
-        <a href="https://twitter.com/" class="twitter" title="Twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/thisisrishabhsharma/" class="facebook" title="Facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/rishaabh.__/" class="instagram" title="Instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/rishabh18b/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="margin-left: 0;">
-    <div id="particles-js"></div>
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Rishabh Sharma</h1>
-      <p>I'm <span class="typed"
-          data-typed-items="a Software Developer, learning and building, always curious, exploring technology"></span></p>
-      <div class="mt-4">
-        <a href="#about" class="btn-get-started scrollto">Get to Know Me</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Dark Mode Toggle -->
   <div class="dark-mode-toggle" id="darkModeToggle">
     <i class="bi bi-moon-fill" id="darkModeIcon"></i>
@@ -485,53 +466,119 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>About Me</h2>
-          <p>Welcome to my corner of the web. I'm passionate about technology and love building things that make a difference.</p>
+          <h2>AI & Cloud Projects</h2>
+          <p>Some projects I've worked on during my time at Amazon and beyond.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
-            <div class="glassmorphism p-4 mb-4">
-              <h3>Hello, I'm Rishabh</h3>
-              <p class="mb-4">
-                I'm a software engineer currently working at Amazon, where I get to work on interesting problems in the finance technology space. 
-                I graduated with a B.Tech in Electronics & Communication Engineering from IIT Guwahati in 2022, and since then, 
-                I've been exploring the fascinating world of cloud computing and artificial intelligence.
-              </p>
-              <p class="mb-4">
-                What excites me most about technology is its potential to solve real problems. Whether it's building data processing pipelines, 
-                creating AI-powered tools, or designing cloud architectures, I enjoy the process of turning complex challenges into elegant solutions.
-              </p>
-              <p class="mb-0">
-                When I'm not coding, you'll find me writing technical articles, exploring new technologies, or simply learning something new. 
-                I believe in continuous growth and sharing knowledge with the community.
-              </p>
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-ai">AI/ML</li>
+              <li data-filter=".filter-web">Web Dev</li>
+              <li data-filter=".filter-robotics">Robotics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="Image Captioning Models">
+              <div class="portfolio-info">
+                <h4>Image Captioning Models</h4>
+                <p>Implementation of various image captioning models with results and examples using deep learning techniques.</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Jupyter Notebook</span>
+                  <span class="tech-badge">Deep Learning</span>
+                  <span class="tech-badge">Computer Vision</span>
+                </div>
+                <div class="mt-3">
+                  <a href="https://github.com/sharma18b/Imgcap_Colab_Notebooks" target="_blank" class="btn btn-primary btn-sm">View on GitHub</a>
+                </div>
+              </div>
             </div>
-            
-            <div class="glassmorphism p-4" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="mb-3">How I Approach Problems</h4>
-              <pre class="code-block p-3 rounded">
-<code>function approachProblem(challenge) {
-  // Break it down into smaller pieces
-  const components = understand(challenge);
-  
-  // Find the right tools and patterns
-  const solutions = components.map(component => {
-    const approach = research(component);
-    return implement(component, approach);
-  });
-  
-  // Put it all together with care
-  return solutions.reduce((system, solution) => {
-    return integrate(system, solution, withTesting: true);
-  }, new Solution());
-}</code>
-              </pre>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="Interview Preparation Tool">
+              <div class="portfolio-info">
+                <h4>Interview Prep Tool</h4>
+                <p>A web-based one-stop tool to guide students preparing for internships and placements with comprehensive resources.</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">HTML/CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">Web Development</span>
+                  <span class="tech-badge">Education</span>
+                </div>
+                <div class="mt-3">
+                  <a href="https://github.com/sharma18b/interview-prep" target="_blank" class="btn btn-primary btn-sm">View on GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-web">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2039&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="Get-Code Chrome Extension">
+              <div class="portfolio-info">
+                <h4>Get-Code Chrome Extension</h4>
+                <p>Chrome extension to extract code snippets using OCR from YouTube tutorial videos, images and PDFs.</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">Chrome Extension</span>
+                  <span class="tech-badge">OCR</span>
+                  <span class="tech-badge">Computer Vision</span>
+                </div>
+                <div class="mt-3">
+                  <a href="https://github.com/sharma18b/Get-Code" target="_blank" class="btn btn-primary btn-sm">View on GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-robotics">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="Hexacopter SLAM">
+              <div class="portfolio-info">
+                <h4>Hexacopter SLAM</h4>
+                <p>Simultaneous Localization and Mapping system for drone using ROS, Hector SLAM package and RPLIDAR A3 sensor.</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">ROS</span>
+                  <span class="tech-badge">SLAM</span>
+                  <span class="tech-badge">Robotics</span>
+                  <span class="tech-badge">LiDAR</span>
+                </div>
+                <div class="mt-3">
+                  <a href="https://github.com/sharma18b/4iLabHexacopter_SLAM" target="_blank" class="btn btn-primary btn-sm">View on GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-robotics">
+            <div class="portfolio-wrap glassmorphism">
+              <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3" class="img-fluid" alt="2D Robotic Drawing Machine">
+              <div class="portfolio-info">
+                <h4>2D Robotic Drawing Machine</h4>
+                <p>Robotic drawing machine with image processing capabilities and Arduino control for automated 2D artwork creation.</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Arduino</span>
+                  <span class="tech-badge">Image Processing</span>
+                  <span class="tech-badge">Robotics</span>
+                </div>
+                <div class="mt-3">
+                  <a href="https://github.com/sharma18b/2drdmnp" target="_blank" class="btn btn-primary btn-sm">View on GitHub</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -546,15 +593,9 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8">
-          <div class="d-flex align-items-center flex-wrap">
-            <div class="me-4 mb-2 mb-md-0">
-              <i class="bi bi-geo-alt me-2"></i><strong>Bangalore, India</strong>
-            </div>
-            <div class="me-4 mb-2 mb-md-0">
-              <i class="bi bi-envelope me-2"></i><strong>risharma18b@gmail.com</strong>
-            </div>
-            <div class="me-4 mb-2 mb-md-0">
-              <i class="bi bi-phone me-2"></i><strong>+91 94245-97135</strong>
+          <div class="d-flex align-items-center">
+            <div class="me-4">
+              <strong>Let's connect:</strong> risharma18b@gmail.com | +91 94245-97135
             </div>
             <div class="social-links">
               <a href="https://github.com/" target="_blank"><i class="bx bxl-github"></i></a>
@@ -580,17 +621,11 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  
-  <!-- Particles.js for background effects -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
-  <!-- Custom JS for dark mode and particles -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const darkModeToggle = document.getElementById('darkModeToggle');
@@ -612,113 +647,41 @@
         }
       });
       
-      if (document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-          "particles": {
-            "number": {
-              "value": 80,
-              "density": {
-                "enable": true,
-                "value_area": 800
-              }
-            },
-            "color": {
-              "value": "#149ddd"
-            },
-            "shape": {
-              "type": "circle",
-              "stroke": {
-                "width": 0,
-                "color": "#000000"
-              },
-              "polygon": {
-                "nb_sides": 5
-              }
-            },
-            "opacity": {
-              "value": 0.5,
-              "random": false,
-              "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": true,
-              "distance": 150,
-              "color": "#149ddd",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 2,
-              "direction": "none",
-              "random": false,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
+      // Portfolio filtering
+      const filterButtons = document.querySelectorAll('#portfolio-flters li');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+          // Add active class to clicked button
+          this.classList.add('filter-active');
+          
+          const filterValue = this.getAttribute('data-filter');
+          
+          portfolioItems.forEach(item => {
+            if (filterValue === '*') {
+              item.style.display = 'block';
+            } else {
+              if (item.classList.contains(filterValue.substring(1))) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
               }
             }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "grab"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              },
-              "resize": true
-            },
-            "modes": {
-              "grab": {
-                "distance": 140,
-                "line_linked": {
-                  "opacity": 1
-                }
-              },
-              "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-              },
-              "repulse": {
-                "distance": 200,
-                "duration": 0.4
-              },
-              "push": {
-                "particles_nb": 4
-              },
-              "remove": {
-                "particles_nb": 2
-              }
-            }
-          },
-          "retina_detect": true
+          });
         });
-      }
+      });
+      
+      // Handle GitHub links
+      const githubLinks = document.querySelectorAll('a[href*="github.com"]');
+      githubLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.open(this.href, '_blank');
+        });
+      });
     });
   </script>
 

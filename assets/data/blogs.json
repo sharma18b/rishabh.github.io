@@ -1,0 +1,84 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "The Art of Prompt Engineering",
+      "description": "Crafting conversations with AI - the new superpower you didn't know you needed. Exploring techniques for effective AI communication and prompt optimization.",
+      "url": "https://risharma18b.medium.com/the-art-of-prompt-engineering-crafting-conversations-with-ai-2354cd673b8b",
+      "platform": "Medium",
+      "date": "Jun 15, 2025",
+      "icon": "bi-cpu",
+      "delay": 0
+    },
+    {
+      "id": 2,
+      "title": "Model Context Protocol (MCP) Server Design",
+      "description": "Enhancing AI model interactions through better server design patterns and protocol implementations for improved performance.",
+      "url": "https://risharma18b.medium.com/a-model-context-protocol-mcp-server-design-enhancing-ai-model-interactions-6d912c9339da",
+      "platform": "Medium",
+      "date": "Jun 13, 2025",
+      "icon": "bi-diagram-3",
+      "delay": 100
+    },
+    {
+      "id": 3,
+      "title": "RAG with Amazon Kendra & Bedrock",
+      "description": "Implementing Retrieval-Augmented Generation for enhanced AI responses using Amazon's powerful cloud services and machine learning capabilities.",
+      "url": "https://risharma18b.medium.com/implementing-rag-retrieval-augmented-generation-with-amazon-kendra-and-bedrock-8a962d959b14",
+      "platform": "Medium",
+      "date": "Jun 12, 2025",
+      "icon": "bi-search",
+      "delay": 200
+    },
+    {
+      "id": 4,
+      "title": "AWS Bedrock with Python Lambda",
+      "description": "A practical guide to integrating AI capabilities using AWS Bedrock and Lambda functions for scalable serverless AI applications.",
+      "url": "https://blog.gopenai.com/getting-started-with-aws-bedrock-using-python-lambda-a-practical-guide-5ee2f4a0e07b",
+      "platform": "GoPenAI",
+      "date": "Jun 10, 2025",
+      "icon": "bi-cloud-arrow-up",
+      "delay": 300
+    },
+    {
+      "id": 5,
+      "title": "AWS DynamoDB: WCU and RCU",
+      "description": "Understanding core concepts and fundamentals of DynamoDB capacity units for optimal database performance and cost management.",
+      "url": "https://risharma18b.medium.com/aws-dynamodb-understanding-wcu-and-rcu-4b3c4e1f09eb",
+      "platform": "Medium",
+      "date": "Jul 31, 2025",
+      "icon": "bi-server",
+      "delay": 400
+    },
+    {
+      "id": 6,
+      "title": "Amazon Q CLI: AI Agent Revolution",
+      "description": "Revolutionizing AWS debugging with AI-powered command line tools that streamline development and troubleshooting workflows.",
+      "url": "https://risharma18b.medium.com/aws-debugging-with-amazon-q-cli-the-ai-agent-revolution-c9bc5b79f60a",
+      "platform": "Medium",
+      "date": "Jul 12, 2025",
+      "icon": "bi-terminal",
+      "delay": 500
+    },
+    {
+      "id": 7,
+      "title": "AI Agents: That's What She Said About The Future!",
+      "description": "A humorous yet insightful take on the future of AI agents and their impact on technology and society.",
+      "url": "https://risharma18b.medium.com/ai-agents-thats-what-she-said-about-the-future-22632d74b65c",
+      "platform": "Medium",
+      "date": "Jun 13, 2025",
+      "icon": "bi-robot",
+      "delay": 600
+    },
+    {
+      "id": 8,
+      "title": "My Placement Preparations",
+      "description": "A comprehensive guide to placement preparations, sharing insights and strategies that helped me secure my position at Amazon.",
+      "url": "https://risharma18b.medium.com/my-placement-preparations-14102815f0ea",
+      "platform": "Medium",
+      "date": "Mar 4, 2023",
+      "icon": "bi-mortarboard",
+      "delay": 700
+    }
+  ]
+}
